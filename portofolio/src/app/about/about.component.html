@@ -1,0 +1,37 @@
+<div (click)="onBackClick()" class="back-icon">
+    <app-back-icon></app-back-icon>
+</div>
+<span class="overlay"></span>
+<div class="container">
+    <div class="side1">
+        <h1 class="skill-header">ABOUT</h1>
+        <app-dp-logo height="13rem" width="13rem" class="dp-logo"></app-dp-logo>
+        <div class="text-container">
+            <p>
+                Since graduated NSU in 2013 with bachelor's degree in computer science, I have been working as 
+                a web developer in several companies.
+
+            </p>
+            <br>
+            <p>
+                I've built a number of web application using various modern techs and methods.
+                I love my job and I always try to learn cutting-edge technologies.
+            </p>
+            <br>
+            <p>
+                Apart from web development, I like IOT & play with Arduino.
+            </p>
+        </div>
+    </div>
+    <div class="side2">
+        <div class="skill-container">
+            <h1 class="skill-header">
+                Skills
+            </h1>
+            <div *ngFor="let skill of skills">
+                <h4 class="skill-type">{{skill.type}}</h4>
+                <h4 class="skill-names">{{skill.names.join(', ')}}</h4>
+            </div>
+        </div>
+    </div>
+</div>
